@@ -10,5 +10,7 @@ router.get("/", (req, res) => {
 
 router.post("/ia", validatePrompt, chat);
 router.post("/generateImg", validatePrompt, generateImg);
-
+router.get("/generateImg", validatePrompt, generateImg);
+router.get("/ia/:prompt", validatePrompt, chat);
+router.get("/ia", validatePrompt, chat);
 export default router;
